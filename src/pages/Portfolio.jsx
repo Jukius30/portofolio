@@ -1,6 +1,6 @@
 // src/pages/Portfolio.jsx
-import { Link } from 'react-router-dom';
-import { projectsData } from '../data/projects';
+import { Link } from "react-router-dom";
+import { projectsData } from "../data/projects";
 
 function Portfolio() {
   return (
@@ -10,7 +10,8 @@ function Portfolio() {
           Featured Projects
         </h1>
         <p className="text-zinc-400">
-          Daftar perangkat lunak, automasi, dan platform web yang telah saya kembangkan.
+          Daftar perangkat lunak, automasi, dan platform web yang telah saya
+          kembangkan.
         </p>
       </div>
 
@@ -20,12 +21,14 @@ function Portfolio() {
             key={project.slug}
             className="flex flex-col justify-between overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950/60 hover:border-zinc-700 hover:bg-zinc-950 transition duration-200"
           >
-            {/* Thumbnail mini di kartu */}
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-44 object-cover border-b border-zinc-850"
-            />
+            {/* Ganti elemen <img> sebelumnya dengan wadah ini */}
+            <div className="w-full h-48 bg-black flex items-center justify-center p-4 border-b border-zinc-850">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
 
             <div className="p-6 flex flex-col flex-1 justify-between">
               <div>
