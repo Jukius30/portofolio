@@ -80,7 +80,7 @@ function About() {
   ];
 
   return (
-    <div className="space-y-12 max-w-4xl mx-auto py-8 text-zinc-300">
+    <div className="space-y-12 max-w-4xl mx-auto py-8 text-zinc-300 animate-fade-in-up">
       {/* Intro Section */}
       <section className="space-y-3">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -107,7 +107,7 @@ function About() {
               key={badge.name}
               src={badge.src}
               alt={badge.name}
-              className="h-8 rounded hover:opacity-90 transition"
+              className="h-8 rounded hover:scale-105 transition-transform duration-200"
             />
           ))}
         </div>
@@ -118,22 +118,22 @@ function About() {
         <h3 className="text-xl font-bold text-white">
           Regular tools I use for programming:
         </h3>
-        <div className="grid grid-cols-4 sm:grid-cols-8 gap-3 p-5 rounded-2xl border border-zinc-850 bg-zinc-950">
+        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-3 p-5 rounded-2xl border border-zinc-850 bg-zinc-950">
           {tools.map((tool) => (
             <a
               key={tool.name}
               href={tool.url}
               target="_blank"
               rel="noreferrer"
-              className="flex flex-col items-center justify-center p-2 rounded-xl bg-black border border-zinc-800/80 hover:border-zinc-700 hover:scale-105 transition duration-200"
+              className="group flex flex-col items-center justify-center p-2 rounded-xl bg-black border border-zinc-800/80 hover:border-zinc-600 hover:-translate-y-1 hover:shadow-[0_4px_16px_rgba(255,255,255,0.04)] transition-all duration-200"
               title={tool.name}
             >
               <img
                 src={tool.img}
                 alt={tool.name}
-                className="w-10 h-10 object-contain rounded-md"
+                className="w-10 h-10 object-contain rounded-md group-hover:scale-110 transition-transform duration-200"
               />
-              <span className="text-[11px] text-zinc-400 mt-2 truncate w-full text-center">
+              <span className="text-[11px] text-zinc-400 mt-2 truncate w-full text-center group-hover:text-zinc-200 transition-colors">
                 {tool.name}
               </span>
             </a>
@@ -149,7 +149,7 @@ function About() {
             href="https://www.linkedin.com/in/juliuswuwung/"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-3 px-5 py-2.5 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 hover:text-white transition"
+            className="flex items-center gap-3 px-5 py-2.5 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-600 hover:text-white hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] transition-all duration-200"
           >
             <img
               src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png"
@@ -163,7 +163,7 @@ function About() {
             href="https://www.instagram.com/julius.sw/?hl=id"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-3 px-5 py-2.5 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-700 hover:text-white transition"
+            className="flex items-center gap-3 px-5 py-2.5 rounded-xl border border-zinc-800 bg-zinc-950 hover:border-zinc-600 hover:text-white hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] transition-all duration-200"
           >
             <img
               src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"

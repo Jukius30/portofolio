@@ -8,7 +8,7 @@ function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="py-20 text-center space-y-4">
+      <div className="py-20 text-center space-y-4 animate-fade-in-up">
         <h2 className="text-2xl font-bold text-white">Project Not Found</h2>
         <p className="text-zinc-400">Proyek yang Anda cari tidak tersedia.</p>
         <Link
@@ -22,11 +22,11 @@ function ProjectDetail() {
   }
 
   return (
-    <article className="max-w-4xl mx-auto py-8 space-y-10">
+    <article className="max-w-4xl mx-auto py-8 space-y-10 animate-fade-in-up">
       <div>
         <Link
           to="/portfolio"
-          className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-blue-400 transition"
+          className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-blue-400 hover:-translate-x-1 transition-all duration-200"
         >
           &larr; Kembali ke Daftar Portofolio
         </Link>
@@ -37,9 +37,8 @@ function ProjectDetail() {
           <span className="text-xs font-semibold uppercase tracking-wider text-blue-400">
             {project.category}
           </span>
-          {/* Badge Status Ketersediaan Demo */}
           <span
-            className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium border ${
+            className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium border transition-colors ${
               project.liveUrl
                 ? 'bg-emerald-950/40 border-emerald-800 text-emerald-400'
                 : 'bg-zinc-900 border-zinc-800 text-zinc-400'
@@ -68,12 +67,12 @@ function ProjectDetail() {
         </div>
       </header>
 
-      {/* Pratinjau Gambar */}
-      <div className="w-full h-72 sm:h-96 bg-zinc-950 rounded-2xl border border-zinc-850 flex items-center justify-center p-6 overflow-hidden">
+      {/* Pratinjau Gambar Proyek */}
+      <div className="group w-full h-72 sm:h-96 bg-zinc-950 rounded-2xl border border-zinc-850 flex items-center justify-center p-6 overflow-hidden hover:border-zinc-700 transition-colors duration-300">
         <img
           src={project.image}
           alt={project.title}
-          className="max-h-full max-w-full object-contain"
+          className="max-h-full max-w-full object-contain group-hover:scale-[1.02] transition-transform duration-300"
         />
       </div>
 
@@ -86,13 +85,12 @@ function ProjectDetail() {
 
       {/* Action Buttons */}
       <section className="flex flex-wrap items-center gap-4 pt-6 border-t border-zinc-850">
-        {/* Tombol GitHub */}
         {project.githubUrl && (
           <a
             href={project.githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black text-sm font-semibold hover:bg-zinc-200 transition shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black text-sm font-semibold hover:bg-zinc-200 hover:scale-105 active:scale-95 transition-all duration-200 shadow-sm"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -105,13 +103,12 @@ function ProjectDetail() {
           </a>
         )}
 
-        {/* Kondisional: Tombol Live Demo AKTIF atau Disabled State */}
         {project.liveUrl ? (
           <a
             href={project.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-500 transition shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-500 hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] transition-all duration-200"
           >
             <span>Live Project Demo</span>
             <span aria-hidden="true">&rarr;</span>
