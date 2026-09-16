@@ -69,7 +69,7 @@ export const projectsData = [
     image: logoMinengens,
     tags: ['React.js', 'Vite', 'Tailwind CSS', 'JavaScript'],
     githubUrl: 'https://github.com/Jukius30/minegens_profile_web',
-    liveUrl: 'https://minegens-profile-web.vercel.app/',
+    liveUrl: 'https://minegens.vercel.app/',
   },
   {
     slug: 'kiwiprinting-profile',
