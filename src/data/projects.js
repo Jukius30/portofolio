@@ -23,7 +23,7 @@ export const projectsData = [
       "Pterodactyl API",
       "MySQL",
     ],
-    githubUrl: "https://github.com/Jukius30", // sesuaikan dengan link repo Jukiverse Anda
+    githubUrl: "https://github.com/Jukius30/JukiverseWeb", // sesuaikan dengan link repo Jukiverse Anda
     liveUrl: null, // ubah ke URL aktif jika web store sudah dideploy publik
   },
   {
