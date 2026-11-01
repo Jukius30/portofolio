@@ -24,7 +24,8 @@ export const projectsData = [
       "MySQL",
     ],
     githubUrl: "https://github.com/Jukius30/JukiverseWeb", // sesuaikan dengan link repo Jukiverse Anda
-    liveUrl: null, // ubah ke URL aktif jika web store sudah dideploy publik
+    liveUrl: "/docs/SKRIPSI.pdf", // ubah ke URL aktif jika web store sudah dideploy publik
+    liveUrlLabel: "Open Documentation PDF", // label untuk tombol liveUrl
   },
   {
     slug: "linkedin-scraper",

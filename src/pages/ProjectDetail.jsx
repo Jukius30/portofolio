@@ -26,9 +26,10 @@ function ProjectDetail() {
       <div>
         <Link
           to="/portfolio"
-          className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-blue-400 hover:-translate-x-1 transition-all duration-200"
+          className="group inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-blue-400 transition-all duration-200"
         >
-          &larr; Kembali ke Daftar Portofolio
+          <span className="group-hover:-translate-x-1 transition-transform duration-200">&larr;</span>
+          <span>Kembali ke Daftar Portofolio</span>
         </Link>
       </div>
 
@@ -44,7 +45,9 @@ function ProjectDetail() {
                 : 'bg-zinc-900 border-zinc-800 text-zinc-400'
             }`}
           >
-            {project.liveUrl ? 'Live Production' : 'Backend / CLI Only'}
+            {project.liveUrl
+              ? project.liveUrlLabel || 'Live Production'
+              : 'Backend / CLI Only'}
           </span>
         </div>
 
@@ -108,10 +111,12 @@ function ProjectDetail() {
             href={project.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-500 hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] transition-all duration-200"
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-500 hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] transition-all duration-200"
           >
-            <span>Live Project Demo</span>
-            <span aria-hidden="true">&rarr;</span>
+            <span>{project.liveUrlLabel || 'Live Project Demo'}</span>
+            <span aria-hidden="true" className="inline-block group-hover:translate-x-1 transition-transform duration-200">
+              &rarr;
+            </span>
           </a>
         ) : (
           <span className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-950 border border-zinc-800/80 text-zinc-500 text-sm cursor-not-allowed">
