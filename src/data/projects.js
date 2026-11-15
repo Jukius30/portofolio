@@ -105,4 +105,17 @@ export const projectsData = [
     githubUrl: "https://github.com/Jukius30/trello-clone",
     liveUrl: "https://trello-clone-pink-six.vercel.app/",
   },
+  {
+    slug: "teyvat-gauntlet-rng",
+    title: "Teyvat Gauntlet — Genshin Team & Boss RNG",
+    category: "Web Application",
+    description:
+      "Aplikasi web Team & Boss Gauntlet RNG untuk Genshin Impact berbasis ReactJS dengan arsitektur Object-Oriented Programming (OOP) tanpa database eksternal.",
+    longDescription:
+      "Dibangun menggunakan ReactJS, Vite, dan Tailwind CSS dengan pemisahan domain model OOP (Character, Boss, GauntletEngine, dan StorageService). Dilengkapi algoritma Fisher-Yates Shuffle untuk pengacakan 4 karakter yang adil tanpa memandang rarity, filter ★4/★5 dan kategori Boss Overworld/Trounce Domain, mekanik eliminasi Kalah/Menang dengan Undo History Stack, manajemen kepemilikan karakter, serta persistensi otomatis melalui LocalStorage dan Export/Import JSON.",
+    image: "/images/teyvat-gauntlet-banner.png",
+    tags: ["ReactJS", "OOP", "Tailwind CSS", "Vite", "LocalStorage"],
+    githubUrl: "https://github.com/Jukius30/genshin-team-boss-rng",
+    liveUrl: "https://teyvat-rng.vercel.app/",
+  },
 ];
